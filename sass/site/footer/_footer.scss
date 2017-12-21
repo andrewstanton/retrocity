@@ -1,0 +1,54 @@
+.site-footer {
+	position: relative;
+	padding-top: 4em;
+	padding-bottom: 3em;
+	color: #fff;
+	background-color: $color_footer_grey;
+	text-align: center;
+}
+	
+.footer-nav {
+	ul {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 0.5em;
+		padding: 0px;
+		margin: 0px;
+		
+		li {
+			display: block;
+			text-align: center;
+			list-style: none;
+
+			a {
+				font-weight: 700;
+				color: white;
+				text-decoration: none;
+				padding: 0px 0.8em;
+				&:hover,
+				&:focus {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	
+}
+
+
+.site-info {
+	padding-top: 2em;
+	font-size: 0.8em;
+}
+
+@media screen and (min-width: $query__small) {
+	.footer-nav {
+		ul {
+			display: block;
+			li {
+				display: inline-block;
+				text-align: left;
+			}
+		}
+	}
+}

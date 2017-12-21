@@ -1,0 +1,13 @@
+{
+  "name": "healthsource",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Todd Productions Inc."
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
+}

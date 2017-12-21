@@ -1,0 +1,37 @@
+.content-banner {
+    height: 350px;
+    background-size: cover;
+    padding: 1em 3em;
+    background-color: $color_grey_section;
+    background-position: center 10%;
+}
+.banner-grid {
+    height: 100%;
+}
+.banner-excerpt {
+    color: $color_white_back;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+.excerpt-back {
+    background-color: $color_trans_red;
+    padding: 1em;
+}
+
+@media screen and (min-width: $query__medium) {
+    .content-banner {
+        height: 450px;    
+    }
+}
+
+@media screen and (min-width: $query__small) {
+
+    .banner-excerpt {
+        font-size: 1em;
+    }
+
+    .excerpt-back {
+        padding: 1.5em;
+    }
+
+}

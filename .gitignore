@@ -1,0 +1,5 @@
+/sass/maps/**.*
+/node_modules/
+/assets/*
+/css/*
+/vendor/

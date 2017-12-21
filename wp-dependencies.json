@@ -1,0 +1,18 @@
+[
+  {
+    "name": "List category posts",
+    "host": "wordpress",
+    "slug": "list-category-posts/list-category-posts.php",
+    "uri": "https://wordpress.org/plugins/list-category-posts/",
+    "branch": "trunk",
+    "optional": false
+  },
+  {
+    "name": "Custom Post Type UI",
+    "host": "wordpress",
+    "slug": "custom-post-type-ui/custom-post-type-ui.php",
+    "uri": "https://wordpress.org/plugins/custom-post-type-ui/",
+    "branch": "trunk",
+    "optional": false
+  }
+]

@@ -1,0 +1,357 @@
+
+.elementor {
+
+    .red-section {
+        background-color: $color_red;
+        color: $color_white_back;
+        -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow:    inset 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+        box-shadow:         inset 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    
+        padding: 2em 20%;
+    
+        text-align: center;
+
+
+        h1, h2, h3, h4, h5, h6, h7, h8, h9, p {
+            color: $color_white_back !important;
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6, h7, h8, h9  {
+        font-family: $font__main !important;
+        margin-top: 0px !important;
+        margin-bottom: 0.5em;
+    }
+
+    p, ul > li {
+        font-family: $font__main !important;
+        color: $color_black !important;
+        font-size: 0.9em !important;
+    }
+
+    a {
+        font-family: $font__main !important;
+        color: $color_red;
+        font-weight: bold;
+
+        &:hover, &:focus {
+            color: $color_red;
+            text-decoration: underline;
+        }
+    }
+
+    .text-left-section {
+        
+        background-color: $color_grey_section;
+        
+        .elementor-row {
+            display: grid !important;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "image"
+            "text";
+
+            text-align: right !important;
+
+            div[data-element_type=column] {
+                width: auto !important;
+            }
+        }
+
+        div[data-element_type=column]:last-child {
+            grid-area: image;
+            min-height: 200px;
+
+            .elementor-column-wrap {
+                padding: 0px !important;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+        }
+
+        div[data-element_type=column]:not(:last-child) {
+            grid-area: text;
+            
+            .elementor-column-wrap {
+                padding: 40px 60px !important;
+            }
+        }
+    }
+
+    .text-right-section {
+
+        .elementor-row {
+            display: grid !important;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "image"
+            "text";
+
+            div[data-element_type=column] {
+                width: auto !important;
+            }
+        }
+
+        div[data-element_type=column]:first-child {
+            grid-area: image;
+            min-height: 200px;
+
+            .elementor-column-wrap {
+                padding: 0px !important;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+        }
+
+        div[data-element_type=column]:not(:first-child) {
+            grid-area: text;
+            
+            .elementor-column-wrap {
+                padding: 40px 60px !important;
+            }
+        }
+
+    }
+
+    .half-text-left-section, .half-text-right-section {
+        .elementor-row {
+            div[data-element_type=column] {
+                
+                h1 {
+                    display: block;
+                    padding: 1em 0.5em;
+                    color: $color_white_back;
+                    text-align: center;
+                    margin-bottom: 1em;
+                    font-size: 1.5em;
+                    
+                    background: #e60042;
+                    background: -moz-linear-gradient(top, #e60042 0%, #b90236 100%);
+                    background: -webkit-linear-gradient(top, #e60042 0%,#b90236 100%);
+                    background: linear-gradient(to bottom, #e60042 0%,#b90236 100%);
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e60042', endColorstr='#b90236',GradientType=0 );
+                    
+                }
+                p {
+                    padding: 0 2em;
+                }
+            }
+        }
+    }
+
+    .half-text-left-section {
+        .elementor-row {
+            display: grid !important;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "image"
+            "text";
+
+            div[data-element_type=column] {
+                width: auto !important;
+            }
+        }
+
+        div[data-element_type=column]:last-child {
+            grid-area: image;
+            min-height: 200px;
+            .elementor-column-wrap {
+                padding: 0px !important;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+        }
+
+        div[data-element_type=column]:not(:last-child) {
+            grid-area: text;
+            .elementor-column-wrap {
+                padding: 0 0 2em 0;
+            }
+        }
+    }
+
+    .half-text-right-section {
+        .elementor-row {
+            display: grid !important;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+            "image"
+            "text";
+
+            div[data-element_type=column] {
+                width: auto !important;
+            }
+        }
+
+        div[data-element_type=column]:first-child {
+            grid-area: image;
+            min-height: 200px;
+            .elementor-column-wrap {
+                padding: 0px !important;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+            }
+        }
+
+        div[data-element_type=column]:not(:first-child) {
+            grid-area: text;
+            .elementor-column-wrap {
+                padding: 0 0 2em 0;
+            }
+        }
+    }
+
+    
+
+    .call-to-action {
+        padding: 3em 0px;
+
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e60042+0,bb0237+99 */
+        background: #e60042; /* Old browsers */
+        background: -moz-linear-gradient(top, #e60042 0%, #bb0237 99%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #e60042 0%,#bb0237 99%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #e60042 0%,#bb0237 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e60042', endColorstr='#bb0237',GradientType=0 ); /* IE6-9 */
+    
+        text-align: center;
+        border-bottom: 8px solid $color_red_dark;
+
+        a.btn {
+            background: none !important;
+            border: 2px solid $color_white_back;
+            padding: 15px 25px;
+            font-family: $font__main !important;
+            font-weight: bold;
+            font-style: italic;
+            color: $color_white_back;
+            transition: box-shadow ease-in-out .15s, background-color ease-in-out .15s;
+
+            &:hover, &:focus {
+                background-color: lighten($color_red, 10%) !important;
+                color: $color_white_back;
+                text-decoration: none;
+                -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.6);
+                -moz-box-shadow:    0px 0px 8px 0px rgba(0, 0, 0, 0.6);
+                box-shadow:         0px 0px 8px 0px rgba(0, 0, 0, 0.6);
+            }
+        }
+
+        h1 {
+            font-size: 1.4em;
+        }
+
+        h1, p {
+            color: $color_white_back !important;
+        }
+    }
+
+}
+
+
+@media screen and (min-width: $query__small) {
+    .elementor {
+        .call-to-action {
+            h1 {
+                font-size: 1.6em;
+            }
+        }
+
+        .text-left-section, .half-text-left-section {
+            .elementor-row {
+                div[data-element_type=column]:last-child {
+                    min-height: 300px;
+                }
+            }
+        }
+        
+        .text-right-section, .half-text-right-section {
+            .elementor-row {
+                div[data-element_type=column]:first-child {
+                    min-height: 300px;
+                }
+            }
+        }
+
+
+    }
+}
+
+@media screen and (min-width: $query__medium) {
+    .elementor {
+        .text-left-section {
+            .elementor-row {
+                display: grid !important;
+                grid-template-columns: 5fr 3fr;
+                grid-template-areas: "text image";
+            
+                div[data-element_type=column]:last-child {
+                    min-height: 350px;
+                }
+            }
+
+        }
+
+        .text-right-section {
+            .elementor-row {
+                display: grid !important;
+                grid-template-columns: 3fr 5fr;
+                grid-template-areas: "image text";
+
+
+                div[data-element_type=column]:first-child {
+                    min-height: 350px;
+                }
+
+            }
+        }
+
+        .half-text-left-section, .half-text-right-section {
+            .elementor-row {
+                div[data-element_type=column] {
+                    h1 {
+                        padding: 1em 0.5em;
+                        margin-bottom: 1em;
+                    }
+                    p {
+                        padding: 0 2em;
+                    }
+                }
+            }
+        }
+
+        .half-text-left-section {
+            .elementor-row {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: "text image";
+            
+                div[data-element_type=column]:last-child {
+                    min-height: 350px;
+                }
+            }
+        }
+        .half-text-right-section {
+            .elementor-row {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: "image text";
+            
+                div[data-element_type=column]:first-child {
+                    min-height: 350px;
+                }
+            }
+        }
+    
+        .call-to-action {
+            h1 {
+                font-size: 2em;
+            }
+        }
+    }
+
+}
