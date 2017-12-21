@@ -1,4 +1,4 @@
-=== HealthSource ===
+=== Retrocity ===
 
 Contributors: Morten Rand-Hendriksen
 Tags: theme-options, custom-menu, post-formats, threaded-comments
@@ -11,7 +11,7 @@ License URI: LICENSE
 
 == Description ==
 
-HealthSource is a hyper-opinionated WordPress theme using CSS Grid and Flexbox for layouts.
+Retrocity is a hyper-opinionated WordPress theme using CSS Grid and Flexbox for layouts.
 
 == Installation ==
 
@@ -23,7 +23,7 @@ HealthSource is a hyper-opinionated WordPress theme using CSS Grid and Flexbox f
 
 = Does this theme support any plugins? =
 
-HealthSource includes support for Infinite Scroll in Jetpack.
+Retrocity includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 

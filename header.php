@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package HealthSource
+ * @package Retrocity
  */
 
 ?><!DOCTYPE html>
@@ -22,6 +22,10 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'hs' ); ?></a>
+
+	<div class="social-header">
+		<?php wp_nav_menu( array( 'theme_location' => 'social', 'menu_id' => 'social-menu' ) ); ?>
+	</div>
 
 	<header id="masthead" class="site-header" role="banner">
 		<div id="header-grid">
@@ -42,14 +46,6 @@
 			</div><!-- .site-branding -->
 				
 			<div class="site-header-links">
-
-				<div class="site-link-header">
-					<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_id' => 'secondary-menu' ) ); ?>
-				</div>
-
-				<div class="site-search-header">	
-					<?php get_search_form(); ?>
-				</div>
 
 				<div class="site-navigation-header">
 					<nav id="site-navigation" class="main-navigation" role="navigation">

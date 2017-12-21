@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package HealthSource
+ * @package Retrocity
  */
 
  if ( ! function_exists( 'hs_posted_on' ) ) :

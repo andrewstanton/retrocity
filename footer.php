@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package HealthSource
+ * @package Retrocity
  */
 
 ?>
@@ -19,7 +19,7 @@
 		</div>
 
 		<div class="site-info">
-			&copy; <?php echo date('Y'); ?> HealthSource America's Chiropractor - Francisee Opportunities
+			&copy; <?php echo date('Y'); ?> Retrocity America's Chiropractor - Francisee Opportunities
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

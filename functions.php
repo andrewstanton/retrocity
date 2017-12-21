@@ -1,10 +1,10 @@
 <?php
 /**
- * HealthSource functions and definitions
+ * Retrocity functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package HealthSource
+ * @package Retrocity
  */
 
 if ( ! function_exists( 'hs_setup' ) ) :
@@ -19,7 +19,7 @@ function hs_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on HealthSource, use a find and replace
+	 * If you're building a theme based on Retrocity, use a find and replace
 	 * to change 'hs' to the name of your theme in all the template files.
 	 */
 	load_theme_textdomain( 'hs', get_template_directory() . '/languages' );
@@ -47,7 +47,7 @@ function hs_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'hs' ),
-		'secondary' => esc_html__( 'Secondary', 'hs' ),
+		'social' => esc_html__( 'Social', 'hs' ),
 		'footer' => esc_html__( 'Footer', 'hs'),
 	) );
 
@@ -160,6 +160,7 @@ function hs_scripts() {
 	
 	//Styles
 	wp_enqueue_style( 'hs-main', get_template_directory_uri() . '/css/main.min.css' );
+	wp_enqueue_style( 'hs-fonts', 'https://fonts.googleapis.com/css?family=Roboto' );
 	wp_enqueue_style( 'hs-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
 
 	wp_enqueue_script( 'hs-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );

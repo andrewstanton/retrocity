@@ -4,7 +4,7 @@
  * Modified from the original found in Twenty Seventeen
  *
  * @package WordPress
- * @subpackage HealthSource
+ * @subpackage Retrocity
  * @since 1.0
  */
 
@@ -63,7 +63,7 @@ function hs_get_svg( $args = array() ) {
 	$aria_labelledby = '';
 
 	/*
-	 * HealthSource doesn't use the SVG title or description attributes; non-decorative icons are described with .screen-reader-text.
+	 * Retrocity doesn't use the SVG title or description attributes; non-decorative icons are described with .screen-reader-text.
 	 *
 	 * However, child themes can use the title and description to add information to non-decorative SVG icons to improve accessibility.
 	 *
@@ -188,9 +188,9 @@ function hs_social_links_icons() {
 	);
 
 	/**
-	 * Filter HealthSource social links icons.
+	 * Filter Retrocity social links icons.
 	 *
-	 * @since HealthSource 1.0
+	 * @since Retrocity 1.0
 	 *
 	 * @param array $social_links_icons
 	 */

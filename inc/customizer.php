@@ -1,8 +1,8 @@
 <?php
 /**
- * HealthSource Theme Customizer
+ * Retrocity Theme Customizer
  *
- * @package HealthSource
+ * @package Retrocity
  */
 
 /**
