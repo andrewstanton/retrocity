@@ -1,7 +1,8 @@
 .site-header {
-	background-color: $color_white_back;
+	background-color: $color_header;
 	padding: 0px 1em;
 }
+
 .social-header {
 	background-color: $color_main;
 	color: $color_white_back;
@@ -38,82 +39,20 @@
 .site-branding {
 	max-width: 400px;
 	margin: auto;
-	background-color: $color_main;
 	display: grid;
-	grid-template-rows: 3fr;
-	position: relative;
-	border-left: 1px solid $color_main;
-	border-right: 1px solid $color_main;
 }
 
 .logo-container {
 	align-items: center;
 	text-align: center;
-	background-color: $color_white_back;
 	padding: 0.8em 2em;
-}
-
-.site-link-header {
-	text-align: right;
-}
-
-/*
-Search Input
-*/
-.search-wrap {
-	position: relative;
-
-	&::before {
-		content: "\f002";
-		font-family: FontAwesome;
-		position: absolute;
-		right: 15px;
-		top: 6px;
-		color: lighten($color_grey, 10%);
-	}
-
-	input[type=search] {
-		display: block;
-		border-radius: 0px;
-		border: 1px solid lighten($color_grey, 10%);
-		color: lighten($color_grey, 10%);
-		width: 100%;
-		padding: 10px 15px;
-		padding-right: 30px;
-		font-size: 0.8em;
-
-		transition: border-color ease-in-out .15s, color ease-in-out .15s;
-
-		&:focus {
-			outline: none;
-			border-color: $color_grey;
-			color: $color_black;
-		}
-	}
-	input[type=search]::-moz-placeholder, input[type=search]::-webkit-input-placeholder, input[type=search]::placeholder {
-		color: lighten($color_grey, 10%);
-	}
-
 }
 
 @media screen and (min-width: $query__medium) {
 
-	.site-branding {
-		/*-webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
-		-moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.75);
-		box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.75);*/
-	}
-
 	.logo-container {
 		padding: 2.5em 1em 0.5em 1em;
 	}
-
-	.site-description {
-		position: absolute;
-		bottom: -44px;
-		z-index: 1000;
-	}
-
 }
 
 
