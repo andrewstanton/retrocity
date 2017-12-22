@@ -24,7 +24,11 @@
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'hs' ); ?></a>
 
 	<div class="social-header">
-		<?php wp_nav_menu( array( 'theme_location' => 'social', 'menu_id' => 'social-menu' ) ); ?>
+		<?php
+		if(has_nav_menu('social')){
+			wp_nav_menu( array( 'theme_location' => 'social', 'menu_id' => 'social-menu' ) ); 
+		}
+		?>
 	</div>
 
 	<header id="masthead" class="site-header" role="banner">
@@ -37,12 +41,6 @@
 					<?php the_custom_logo(); ?>
 				</div>
 				
-				<?php
-				$description = get_bloginfo( 'description', 'display' );
-				if ( $description || is_customize_preview() ) : ?>
-					<p class="site-description"><a href="<?php get_home_url(); ?>"><?php echo $description; /* WPCS: xss ok. */ ?></a></p>
-				<?php
-				endif; ?>
 			</div><!-- .site-branding -->
 				
 			<div class="site-header-links">

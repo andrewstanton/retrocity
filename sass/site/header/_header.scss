@@ -2,16 +2,48 @@
 	background-color: $color_white_back;
 	padding: 0px 1em;
 }
+.social-header {
+	background-color: $color_main;
+	color: $color_white_back;
+	
+	ul {
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: row;
+		justify-content: flex-end;
+		margin: 0;
+		padding: 0 1em;
+
+		li:not(:first-child) {
+			border-left: 1px solid $color_white_back;
+		}
+
+		li {
+			display: inline-block;
+
+			a {
+				color: $color_white_back;
+				text-decoration: none;
+				padding: 0.6em 0.4em;
+				font-size: 0.9em;
+
+				&:hover {
+					background-color: darken($color_main, 10%);
+				}
+			}
+		}
+	}
+}
 
 .site-branding {
 	max-width: 400px;
 	margin: auto;
-	background-color: $color_red;
+	background-color: $color_main;
 	display: grid;
 	grid-template-rows: 3fr;
 	position: relative;
-	border-left: 1px solid $color_red;
-	border-right: 1px solid $color_red;
+	border-left: 1px solid $color_main;
+	border-right: 1px solid $color_main;
 }
 
 .logo-container {
@@ -21,31 +53,6 @@
 	padding: 0.8em 2em;
 }
 
-.site-description {
-	margin: 0px;
-	width: 100%;
-	text-align: center;
-	border-left: 1px solid $color_red;
-	border-right: 1px solid $color_red;
-
-	a {
-		padding: 2.5em 1em 0.5em 1em;
-		color: $color_white_back;
-		font-size: .8em;
-		font-weight: 700;
-		padding: 10px 14px;
-		display: block;
-		text-decoration: none;
-		background-color: $color_red;
-
-		&:hover, &:focus {
-			color: $color_white_back;
-			text-decoration: none;
-			background-color: lighten($color_red, 10%);
-		}
-	}
-
-}
 .site-link-header {
 	text-align: right;
 }

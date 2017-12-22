@@ -29,7 +29,7 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
-		background-color: $color_red;
+		background-color: $color_main;
 		color: $color_white_back;
 		cursor: default;
 	}
@@ -49,9 +49,9 @@
 	padding: 1em 2em;
 	font-weight: bold;
 	font-style: italic;
-	color: $color_red !important;
+	color: $color_main !important;
 	background: none !important;
-	border: 2px solid $color_red;
+	border: 2px solid $color_main;
 	
 	span.fa {
 		margin-right: 0.5em;
@@ -119,7 +119,7 @@
 				
 				&:hover, 
 				&focus {
-					background-color: $color_red;
+					background-color: $color_main;
 					a {
 						color: $color_white_back;
 					}

@@ -19,10 +19,15 @@
             display: grid;
             grid-template-columns: 1fr minmax(1fr, auto);
             grid-template-areas:
+                "social social"
                 "header header"
                 "banner banner"
                 "main main"
                 "footer footer";
+        }
+
+        .social-header {
+            grid-area: social;
         }
 
         .content-banner {

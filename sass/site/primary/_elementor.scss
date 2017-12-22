@@ -2,7 +2,7 @@
 .elementor {
 
     .red-section {
-        background-color: $color_red;
+        background-color: $color_main;
         color: $color_white_back;
         -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
         -moz-box-shadow:    inset 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
@@ -32,11 +32,11 @@
 
     a {
         font-family: $font__main !important;
-        color: $color_red;
+        color: $color_main;
         font-weight: bold;
 
         &:hover, &:focus {
-            color: $color_red;
+            color: $color_main;
             text-decoration: underline;
         }
     }
@@ -219,7 +219,7 @@
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e60042', endColorstr='#bb0237',GradientType=0 ); /* IE6-9 */
     
         text-align: center;
-        border-bottom: 8px solid $color_red_dark;
+        border-bottom: 8px solid $color_main_dark;
 
         a.btn {
             background: none !important;
@@ -232,7 +232,7 @@
             transition: box-shadow ease-in-out .15s, background-color ease-in-out .15s;
 
             &:hover, &:focus {
-                background-color: lighten($color_red, 10%) !important;
+                background-color: lighten($color_main, 10%) !important;
                 color: $color_white_back;
                 text-decoration: none;
                 -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.6);

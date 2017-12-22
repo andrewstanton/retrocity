@@ -15,11 +15,15 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="footer-nav">
-			<?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_id' => 'footer-menu' ) ); ?>
+			<?php 
+			if(has_nav_menu('footer')){
+				wp_nav_menu( array( 'theme_location' => 'footer', 'menu_id' => 'footer-menu' ) );
+			} ?>
 		</div>
 
 		<div class="site-info">
-			&copy; <?php echo date('Y'); ?> Retrocity America's Chiropractor - Francisee Opportunities
+			&copy; <?php echo date('Y'); ?> 
+			<?php echo get_bloginfo(); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

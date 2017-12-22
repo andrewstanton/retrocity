@@ -10,14 +10,14 @@
     white-space: nowrap;
 
 
-    background-color: $color_red;
+    background-color: $color_main;
     color: $color_white_back;
   
   
     &:hover,
     &:focus,
     &.focus {
-        background-color: lighten($color_red, 10%);
+        background-color: lighten($color_main, 10%);
         color: $color_white_back;
         text-decoration: none;
     }
