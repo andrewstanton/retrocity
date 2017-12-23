@@ -15,10 +15,13 @@
 			padding: 0.5em;
 
 			a {
+				text-align: center;
 				font-size: 0.9em;
 				border-bottom: 3px solid $color_header;
 				padding: 0.2em 0;
 				color: $color_white_back;
+				text-transform: uppercase;
+				font-family: $nav_font;
 			}
 
 			&:hover, 
@@ -62,9 +65,9 @@
 	padding: 1em 2em;
 	font-weight: bold;
 	font-style: italic;
-	color: $color_main !important;
+	color: $color_white_back !important;
 	background: none !important;
-	border: 2px solid $color_main;
+	border: 2px solid $color_white_back;
 	
 	span.fa {
 		margin-right: 0.5em;

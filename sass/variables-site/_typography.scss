@@ -2,8 +2,12 @@
  * Set Up Of Font Faces
  */
 
-$font__main: 'Roboto', sans-serif;;
-$font__meta: 'Roboto', sans-serif;;
+$body_font: 'Allerta', sans-serif;
+$nav_font: 'Cabin', sans-serif;
+$header_font: 'Viga', sans-serif;
+
+$font__main: $body_font;
+$font__meta: $header_font;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;

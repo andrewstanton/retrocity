@@ -24,16 +24,19 @@
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'hs' ); ?></a>
 
 	<div class="social-header">
+	<div class="container">
 		<?php
 		if(has_nav_menu('social')){
 			wp_nav_menu( array( 'theme_location' => 'social', 'menu_id' => 'social-menu' ) ); 
 		}
 		?>
 	</div>
+	</div>
 
-	<header id="masthead" class="site-header" role="banner">
+	<header id="masthead" class="site-header" role="banner">	
+		<div class="container">
 		<div id="header-grid">
-			
+				
 			
 			<div class="site-branding">
 
@@ -54,5 +57,6 @@
 			</div><!--.site-header-links-->
 
 		</div><!--#header-grid-->
+	</div><!--container-->
 	</header><!-- #masthead -->
 

@@ -1,10 +1,11 @@
 .site-footer {
 	position: relative;
-	padding-top: 4em;
-	padding-bottom: 3em;
+	padding-top: 3em;
+	padding-bottom: 2em;
 	color: #fff;
 	background-color: $color_footer_grey;
 	text-align: center;
+	font-family: $nav_font;
 }
 	
 .footer-nav {
@@ -15,16 +16,21 @@
 		padding: 0px;
 		margin: 0px;
 		
+		margin-bottom: 1em;
+
 		li {
 			display: block;
 			text-align: center;
 			list-style: none;
 
 			a {
-				font-weight: 700;
 				color: white;
 				text-decoration: none;
 				padding: 0px 0.8em;
+				font-family: $nav_font;
+				text-transform: uppercase;
+				font-size: 0.8em;
+
 				&:hover,
 				&:focus {
 					text-decoration: underline;
@@ -37,7 +43,6 @@
 
 
 .site-info {
-	padding-top: 2em;
 	font-size: 0.8em;
 }
 

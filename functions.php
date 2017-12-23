@@ -160,7 +160,7 @@ function hs_scripts() {
 	
 	//Styles
 	wp_enqueue_style( 'hs-main', get_template_directory_uri() . '/css/main.min.css' );
-	wp_enqueue_style( 'hs-fonts', 'https://fonts.googleapis.com/css?family=Roboto' );
+	wp_enqueue_style( 'hs-fonts', 'https://fonts.googleapis.com/css?family=Allerta|Cabin|Viga' );
 	wp_enqueue_style( 'hs-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
 
 	wp_enqueue_script( 'hs-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
