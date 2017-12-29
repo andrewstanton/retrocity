@@ -18,11 +18,9 @@
 .index-post-area {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-areas: "post";
 
 	.post {
 		display: grid;
-		grid-area: post;
 		grid-template-columns: 3em 1fr;
 		grid-template-areas: "postlink postcontent";
 		grid-gap: 1em;
@@ -128,6 +126,5 @@
 	.index-post-area {
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 0.5em;
-		grid-template-areas: "post post";
 	}
 }

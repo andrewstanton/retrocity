@@ -36,11 +36,11 @@
 	// The Loop
 	if ( $latest_posts_query->have_posts() ) { ?>
 	
-	<div class="index-post-area section">
-
-	<div class="post-area-index text-center">
+	<div class="post-area-title text-center">
 		<span class="post-title-area">Latest Posts</span>
 	</div>
+	
+	<div class="index-post-area section">
 
 	<?php
 		//Posts Put On Home Page
