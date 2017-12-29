@@ -11,43 +11,48 @@
 	background-color: $color_white_back;
 }
 
-body:not(.archive-view) {
+.section {
+	padding: 1em;
+}
 
-	@supports (grid-area: auto) {
-		@media screen and (min-width: $query__medium) {
+.index-post-area {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas: "post";
 
-			.post,
-			.page {
-				
+	.post {
+		display: grid;
+		grid-area: post;
+		grid-template-columns: 3em 1fr;
+		grid-template-areas: "postlink postcontent";
+		grid-gap: 1em;
+		margin: 2em 0;
+
+		.post-link-icon {
+			grid-area: postlink;
+			text-align: center;
+			
+			a {
+				background-color: $color_main;
+				color: #FFF;
+				padding: 0.5em 0.8em;
+				display: inline-block;
+				font-size: 1.2em;
+
+				&:hover {
+					background-color: darken($color_main, 10%);
+				}
 			}
-
-			.entry-header {
-			}
-
-			.entry-meta {
-			}
-
-			.featured-image {
-			}
-
-			.entry-content {
-			}
-
-			.entry-footer {
-			}
-
-			.post-navigation {
-			}
-
-			.comments-area {
-			}
-
 		}
+
+		.post-body-content {
+			grid-area: postcontent;
+			padding-left: 1.5em;
+		}
+
 	}
 
 }
-
-
 
 .cat-links {
 	margin-bottom: .5em;
@@ -67,44 +72,39 @@ body:not(.archive-view) {
 }
 
 .entry-title {
-	margin: .125em 0 .25em;
-	font-size: 2.5em;
-	line-height: 1.2em;
-	text-align: center;
-
-	@media screen and (min-width: $query__medium) {
-		font-size: 3em;
-	}
+	margin: 0;
+	font-size: 1.8em;
+	text-align: left;
 
 	a {
 		text-decoration: none;
-		color: black;
+		color: $color_body_text;
+		transition: color ease-in-out 0.15s;
 
 		&:focus,
 		&:hover {
-			border-bottom: 5px solid;
+			color: $color_main;
 		}
 	}
 }
 
-.entry-meta,
-.entry-footer {
-	font-family: $font__meta;
-	font-size: 80%;
-	color: hsl(0, 0%, 25%);
+.entry-link {
+	padding-top: 1em;
+	text-align: right;
 
 	a {
-		font-weight: 700;
+		color: $color_main;
 		text-decoration: none;
-		color: black;
-		border-bottom: 3px solid transparent;
-
-		&:focus,
+		
 		&:hover {
-			color: black;
-			border-bottom-color: black;
+			text-decoration: underline;
 		}
 	}
+}
+
+.entry-content {
+	padding-top: 1em;
+	font-size: 0.8em;
 }
 
 .byline {
@@ -122,4 +122,12 @@ body:not(.archive-view) {
 .single .byline,
 .group-blog .byline {
 	display: inline;
+}
+
+@media screen and (min-width: $query__medium){
+	.index-post-area {
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 0.5em;
+		grid-template-areas: "post post";
+	}
 }

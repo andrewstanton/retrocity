@@ -1,11 +1,17 @@
 .content-banner {
-    height: 350px;
+    height: 300px;
     background-size: cover;
     background-position: center 10%;
     overflow: hidden;
     position: relative;
     width: 100%;
 }
+.banner-img { 
+    background-size: cover;
+    background-position: center center;
+    height: 300px;
+}
+
 @media screen and (min-width: $query__medium) {
     .content-banner {
         height: 450px;    
@@ -16,6 +22,7 @@
         height: inherit;
 
         .banner-img {
+            height: 450px;
             width: 70%;
             margin: auto;
             height: inherit;

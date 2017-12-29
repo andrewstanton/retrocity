@@ -21,3 +21,45 @@
 		?>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->
+
+	<?php
+	
+	if ( is_front_page() ) {
+	
+	// Get the 6 latest posts
+	$args = array(
+		'posts_per_page' => 6
+	);
+
+	$latest_posts_query = new WP_Query( $args );
+
+	// The Loop
+	if ( $latest_posts_query->have_posts() ) { ?>
+	
+	<div class="index-post-area section">
+
+	<div class="post-area-index text-center">
+		<span class="post-title-area">Latest Posts</span>
+	</div>
+
+	<?php
+		//Posts Put On Home Page
+		while ( $latest_posts_query->have_posts() ) {
+
+			$latest_posts_query->the_post();
+			
+			// Get the standard index page content
+			get_template_part( 'template-parts/content', get_post_format() );
+			}
+		}
+	?>
+	
+	</div>
+	
+	<?php
+		/* Restore original Post Data */
+		wp_reset_postdata();
+	
+	} // endif
+	?>
+
