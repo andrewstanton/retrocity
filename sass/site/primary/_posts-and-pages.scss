@@ -86,9 +86,19 @@
 	}
 }
 
+.post-entry-date {
+	font-size: 0.8em;
+	font-family: $body_font;
+	font-style: italic;
+}
+.entry-header {
+	line-height: 1em;
+	margin-bottom: 0.5em;
+}
 .entry-link {
 	padding-top: 1em;
 	text-align: right;
+	font-size: 0.8em;
 
 	a {
 		color: $color_main;
@@ -100,8 +110,12 @@
 	}
 }
 
+.post-body {
+	margin-top: 2em;
+	font-size: 1rem;
+}
+
 .entry-content {
-	padding-top: 1em;
 	font-size: 0.8em;
 }
 
@@ -121,6 +135,30 @@
 .group-blog .byline {
 	display: inline;
 }
+
+.post-area-title {
+	position: relative;
+	text-align: center;
+	height: 0;
+	margin-top: -20px;
+
+	.post-title-area {
+		z-index: 300;
+		display: inline-block;
+		background-color: $color_main;
+		color: $color_white_back;
+		padding: 0.5em 2em;
+		border: 3px solid $color_white_back;
+		text-transform: uppercase;
+		-webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5);
+		-moz-box-shadow:    0px 0px 8px 0px rgba(0, 0, 0, 0.5);
+		box-shadow:         0px 0px 8px 0px rgba(0, 0, 0, 0.5);
+		font-size: 1.5em;
+		font-family: $header_font;
+		margin-top: -30px;
+	}
+}
+
 
 @media screen and (min-width: $query__medium){
 	.index-post-area {

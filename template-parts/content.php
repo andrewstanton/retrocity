@@ -28,6 +28,7 @@
 				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			endif;
 			?>
+			<span class="post-entry-date">Posted On <?php echo the_date('F d, Y')?></span>
 		</header><!-- .entry-header -->
 
 		<div class="entry-content">
@@ -37,7 +38,7 @@
 		</div><!-- .entry-content -->
 
 		<div class="entry-link text-right">
-			<a href="<?php esc_url( get_permalink() ); ?>" class="more-link">Read More</a>
+			<a href="<?php echo esc_url( get_permalink() ); ?>" class="more-link">Read More</a>
 		</div>
 
 	</div><!--post-body-content-->

@@ -12,6 +12,12 @@
     height: 300px;
 }
 
+.single {
+    .content-banner, .banner-img {
+        height: 300px;
+    }
+}
+
 @media screen and (min-width: $query__medium) {
     .content-banner {
         height: 450px;    
