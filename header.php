@@ -41,7 +41,7 @@
 			<div class="site-branding">
 
 				<div class="logo-container">
-					<img src="<?php echo get_template_directory_uri() . '/images/logo.png';?>" alt="<?php echo bloginfo('name');?>"/>
+					<img src="<?php echo get_template_directory_uri() . '/images/logo.jpg';?>" alt="<?php echo bloginfo('name');?>"/>
 				</div>
 				
 			</div><!-- .site-branding -->
