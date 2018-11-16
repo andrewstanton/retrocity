@@ -1,0 +1,19 @@
+/**
+ * Main SASS File
+ * Using Bootstrap and custom css
+ */
+
+// Fonts
+@import "./fonts";
+
+// Custom Variables
+@import "./variables-site/hs_landing_variables";
+
+// Underscores file
+@import "./underscores";
+
+// Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// Custom Styles
+@import "./custom";

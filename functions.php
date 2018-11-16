@@ -208,14 +208,3 @@ require get_template_directory() . '/inc/jetpack.php';
  * Load SVG icon functions.
  */
 require get_template_directory() . '/inc/icon-functions.php';
-
-/**
- * Load custom widgets
- */
-require get_template_directory() . "/widgets/recent-comments.php";
-require get_template_directory() . "/widgets/recent-posts.php";
-
-
-//Load Plugin Dependency
-include_once( __DIR__ . '/vendor/autoload.php' );
-WP_Dependency_Installer::instance()->run( __DIR__ );

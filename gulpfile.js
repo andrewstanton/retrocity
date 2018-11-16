@@ -8,14 +8,15 @@ const notify = require('gulp-notify');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 
-var config = {
-    sassDir: ['./sass/main.scss'],
-    sassOutputDir: './css/',
-    sassWatch: './sass/**/*.scss'
+const config = {
+    publicCSSDir: '',
+    publicJSCompDir: './dist/js',
+    sassDir: './dev/sass',
+    jsDir: './dev/js',
 }
 
 const sassTask = (done) => {
-    src(config.sassDir).pipe(plumber({ errorHandler: function(err) {
+    src(`${config.sassDir}/style.scss`).pipe(plumber({ errorHandler: function(err) {
         notify.onError({
             title: "Gulp error in " + err.plugin,
             message:  err.toString()
@@ -25,20 +26,19 @@ const sassTask = (done) => {
     }})) 
     .pipe(sass())
     .pipe(
-        dest(config.sassOutputDir)
+        dest(config.publicCSSDir)
     )
     .pipe(rename({
         suffix: '.min'
     }))
     .pipe(cleanCSS())    
-    .pipe(
-        dest(config.sassOutputDir)
-    );
+    .pipe(dest(config.publicCSSDir));
     done();
 };
 
-const scriptTask = () => {
-    src(`${config.jsDir}*.js`).pipe(plumber({ errorHandler: function(err) {
+const scriptTask = (done) => {
+    src(`${config.jsDir}/*.js`)
+    .pipe(plumber({ errorHandler: function(err) {
         notify.onError({
             title: "Gulp error in " + err.plugin,
             message:  err.toString()
@@ -47,16 +47,13 @@ const scriptTask = () => {
         gutil.beep();
     }}))
     .pipe(concat('app.js'))
-    .pipe(
-        dest( config.publicJSCompDir )
-    )
+    .pipe(dest( config.publicJSCompDir ))
     .pipe(rename({
         suffix: '.min'
       }))
     .pipe(uglify())
-    .pipe(
-        dest( config.publicJSCompDir )
-    );
+    .pipe(dest( config.publicJSCompDir ));
+    done();
 };
 
 const watchSASS = () => {

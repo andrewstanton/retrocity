@@ -23,8 +23,6 @@ get_header(); ?>
 
 		<?php
 
-		echo hs_get_the_archive_navigation( 'next' );
-		
 		/* Start the Loop */
 		while ( have_posts() ) : the_post();
 
@@ -37,8 +35,6 @@ get_header(); ?>
 
 		endwhile;
 
-		echo hs_get_the_archive_navigation( 'previous' );
-
 	else :
 
 		get_template_part( 'template-parts/content', 'none' );
@@ -48,5 +44,4 @@ get_header(); ?>
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
