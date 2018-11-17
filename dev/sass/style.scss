@@ -4,10 +4,10 @@
  */
 
 // Fonts
-@import "./fonts";
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro:900|Open+Sans+Condensed:300');
 
 // Custom Variables
-@import "./variables-site/hs_landing_variables";
+@import "./variables-site/custom_vars";
 
 // Underscores file
 @import "./underscores";
@@ -17,3 +17,4 @@
 
 // Custom Styles
 @import "./custom";
+@import "./responsiveness";

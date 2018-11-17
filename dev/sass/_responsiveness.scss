@@ -1,0 +1,14 @@
+/**
+ * Responsive Styles
+ */
+
+
+
+// Medium and up
+@include media-breakpoint-up(md) {
+	.main-navigation {
+		.menu-toggle {
+			display: none;
+		}
+	}
+}

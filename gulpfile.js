@@ -9,25 +9,23 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 
 const config = {
-    publicCSSDir: '',
+    publicCSSDir: './',
     publicJSCompDir: './dist/js',
     sassDir: './dev/sass',
     jsDir: './dev/js',
 }
 
 const sassTask = (done) => {
-    src(`${config.sassDir}/style.scss`).pipe(plumber({ errorHandler: function(err) {
+    src(config.sassDir + '/style.scss').pipe(plumber({ errorHandler: function(err) {
         notify.onError({
             title: "Gulp error in " + err.plugin,
             message:  err.toString()
         })(err);
-        // play a sound once
+
         gutil.beep();
     }})) 
     .pipe(sass())
-    .pipe(
-        dest(config.publicCSSDir)
-    )
+    .pipe(dest(config.publicCSSDir))
     .pipe(rename({
         suffix: '.min'
     }))
@@ -37,7 +35,7 @@ const sassTask = (done) => {
 };
 
 const scriptTask = (done) => {
-    src(`${config.jsDir}/*.js`)
+    src(config.jsDir + '/*.js')
     .pipe(plumber({ errorHandler: function(err) {
         notify.onError({
             title: "Gulp error in " + err.plugin,
@@ -57,10 +55,13 @@ const scriptTask = (done) => {
 };
 
 const watchSASS = () => {
-    watch(config.sassWatch, sassTask);
+    watch(config.sassDir + '**/*.scss', parallel([ sassTask ]));
+};
+const watchScripts = () => {
+    watch(config.jsDir + '**/*.js', parallel([ scriptTask ]));
 };
 
-const watchTask = parallel( watchSASS );
+const watchTask = parallel([ watchSASS, watchScripts ]);
 const defaultTasks = (done) => {
     series(sassTask, watchTask)(done);
 }

@@ -1,3 +1,71 @@
 /**
  * Custom Styles
  */
+
+// Basic Areas
+
+header {
+    
+    .logo-container {
+        padding: 1em 0;
+
+        img {
+            max-width: 250px;
+        }
+    }
+
+    .main-navigation {
+        .menu {
+            li {
+                a {
+                    padding: 1.2em 1em;
+                    font-family: $header_font;
+                    color: $white;
+                    font-size: 1rem;
+                    
+                    &:hover {
+                        color: $retro_pink;
+                    }
+                }
+                &.current-menu-item {
+                    a {
+                        background-color: $retro_pink;
+                        color: $black;
+                        cursor: default;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+footer {
+    color: $white;
+    text-align: center;
+
+    .menu-footer-menu-container, .menu {
+        display: inline;
+    }
+
+    .footer-nav {
+        ul {
+            padding: 0;
+            margin: 0;
+            
+            li {
+                display: inline-block;
+                padding: 0 0.5em;
+
+                a {
+                    color: $retro_pink;
+                    text-decoration: none;
+                    &:hover {
+                        color: $retro_pink;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -3,3 +3,5 @@
 /assets/*
 /css/*
 /vendor/
+/style.min.css
+/dist/js/*

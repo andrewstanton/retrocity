@@ -14,49 +14,47 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
 
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'hs' ); ?></a>
-
-	<div class="social-header">
-	<div class="container">
-		<?php
-		if(has_nav_menu('social')){
-			wp_nav_menu( array( 'theme_location' => 'social', 'menu_id' => 'social-menu' ) ); 
-		}
-		?>
-	</div>
-	</div>
 
 	<header id="masthead" class="site-header" role="banner">	
-		<div class="container">
-		<div id="header-grid">
-				
-			
-			<div class="site-branding">
-
-				<div class="logo-container">
-					<img src="<?php echo get_template_directory_uri() . '/images/logo.jpg';?>" alt="<?php echo bloginfo('name');?>"/>
+		<div class="container">	
+						
+			<div class="row">
+				<div class="col-auto">
+					<div class="logo-container">
+						<a href="<?php echo get_home_url(); ?>" title="<?php echo get_bloginfo();?> Home Page">
+							<img src="<?php echo get_template_directory_uri() . '/imgs/logo.png';?>"
+								alt="<?php echo bloginfo('name');?>"/>
+						</a>
+					</div>
 				</div>
-				
-			</div><!-- .site-branding -->
-				
-			<div class="site-header-links">
+				<div class="col">
+					<div class="header-top">
+					<?php
+						if(has_nav_menu('social')){
+							wp_nav_menu( array( 'theme_location' => 'social', 'menu_id' => 'social-menu' ) ); 
+						}
+					?>
+					</div>
+					<div class="header-bottom">
+						<nav id="site-navigation" class="main-navigation" role="navigation">
+							<button class="menu-toggle btn btn-block" aria-controls="primary-menu" aria-expanded="false">
+								Navigation
+							</button>
+							<?php
+								wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) );
+							?>
+						</nav><!-- #site-navigation -->
+					</div>
+				</div><!--col-->
+			</div><!--row-->
 
-				<div class="site-navigation-header">
-					<nav id="site-navigation" class="main-navigation" role="navigation">
-						<button class="menu-toggle btn btn-block" aria-controls="primary-menu" aria-expanded="false">Navigation</button>
-						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-					</nav><!-- #site-navigation -->
-				</div>
-			</div><!--.site-header-links-->
-
-		</div><!--#header-grid-->
-	</div><!--container-->
+		</div><!--container-->
+	
 	</header><!-- #masthead -->
 

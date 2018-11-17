@@ -15,20 +15,18 @@
 
 	<footer id="colophon" class="site-footer">
 
-	<div class="container">
-		<div class="footer-nav">
+		<div class="container">
+			<div class="footer-nav">
+				<?php echo date('Y'); ?> 
+				<?php echo get_bloginfo(); ?>
+				Website - 
 				<?php 
 				if(has_nav_menu('footer')){
-					wp_nav_menu( array( 'theme_location' => 'footer', 'menu_id' => 'footer-menu' ) );
+					wp_nav_menu( array( 'theme_location' => 'footer', 'menu_id' => 'footer-menu' ));
 				} ?>
 			</div>
+		</div>
 
-			<div class="site-info">
-				&copy; <?php echo date('Y'); ?> 
-				<?php echo get_bloginfo(); ?>
-			</div><!-- .site-info -->
-
-	</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

@@ -1,0 +1,21 @@
+/**
+ * Variables For Retrocity
+ */
+
+// Colors
+$retro_pink: #e70189;
+$retro_blue: #05b4ee;
+$retro_lit_blue: #9ae6ff;
+$white: #FFF;
+$black: #000;
+
+// Fonts
+$main_font: 'Open Sans Condensed', sans-serif;
+$header_font: 'Maven Pro', sans-serif;
+
+// Bootstrap Overwrite
+$primary: $retro_pink;
+$font-family-sans-serif: $main_font;
+$headings-font-family: $header_font;
+
+$body-bg: $black;
