@@ -11,12 +11,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="post-link-icon">
-		<a href="<?php esc_url( get_permalink() ); ?>">
-			<span class="fa fa-share"></span>
-		</a>
-	</div>
-
 	<div class="post-body-content">
 
 		<header class="entry-header">
@@ -37,7 +31,7 @@
 			?>
 		</div><!-- .entry-content -->
 
-		<div class="entry-link text-right">
+		<div class="entry-link">
 			<a href="<?php echo esc_url( get_permalink() ); ?>" class="more-link">Read More</a>
 		</div>
 

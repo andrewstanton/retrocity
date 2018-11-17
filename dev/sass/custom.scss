@@ -15,7 +15,9 @@ header {
     }
 
     .main-navigation {
-        .menu {
+        ul.menu {
+            justify-content: flex-end;
+
             li {
                 a {
                     padding: 1.2em 1em;
@@ -39,8 +41,55 @@ header {
     }
 }
 
+.site-main {
+    color: $white;
+    a {
+        color: $retro_blue;
+        text-decoration: none;
+
+        &:hover {
+            color: $retro_blue;
+            text-decoration: underline;
+        }
+    }
+}
+
+.index-post-area {
+    display: flex;
+    .post {
+        flex: 50%;
+
+        .post-body-content {
+            padding: 1em;
+        }
+
+        &:nth-child(odd) {
+            .entry-title {
+                a {
+                    color: $retro_pink;
+                    &:hover {
+                        color: lighten($retro_pink, 10%);
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        &:nth-child(even) {
+            .entry-title {
+                a {
+                    color: $retro_lit_blue;
+                    &:hover {
+                        color: darken($retro_lit_blue, 10%);
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
 
 footer {
+    padding: 2em 0 6em 0;
     color: $white;
     text-align: center;
 
@@ -52,7 +101,7 @@ footer {
         ul {
             padding: 0;
             margin: 0;
-            
+
             li {
                 display: inline-block;
                 padding: 0 0.5em;

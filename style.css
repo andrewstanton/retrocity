@@ -576,7 +576,7 @@ a {
     height: 100%; }
   .main-navigation ul {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     height: 100%;
     list-style: none;
@@ -7149,20 +7149,48 @@ header .logo-container {
   header .logo-container img {
     max-width: 250px; }
 
-header .main-navigation .menu li a {
-  padding: 1.2em 1em;
-  font-family: "Maven Pro", sans-serif;
-  color: #FFF;
-  font-size: 1rem; }
-  header .main-navigation .menu li a:hover {
-    color: #e70189; }
+header .main-navigation ul.menu {
+  justify-content: flex-end; }
+  header .main-navigation ul.menu li a {
+    padding: 1.2em 1em;
+    font-family: "Maven Pro", sans-serif;
+    color: #FFF;
+    font-size: 1rem; }
+    header .main-navigation ul.menu li a:hover {
+      color: #e70189; }
+  header .main-navigation ul.menu li.current-menu-item a {
+    background-color: #e70189;
+    color: #000;
+    cursor: default; }
 
-header .main-navigation .menu li.current-menu-item a {
-  background-color: #e70189;
-  color: #000;
-  cursor: default; }
+.site-main {
+  color: #FFF; }
+  .site-main a {
+    color: #05b4ee;
+    text-decoration: none; }
+    .site-main a:hover {
+      color: #05b4ee;
+      text-decoration: underline; }
+
+.index-post-area {
+  display: flex; }
+  .index-post-area .post {
+    flex: 50%; }
+    .index-post-area .post .post-body-content {
+      padding: 1em; }
+    .index-post-area .post:nth-child(odd) .entry-title a {
+      color: #e70189; }
+      .index-post-area .post:nth-child(odd) .entry-title a:hover {
+        color: #fe1da2;
+        text-decoration: none; }
+    .index-post-area .post:nth-child(even) .entry-title a {
+      color: #9ae6ff; }
+      .index-post-area .post:nth-child(even) .entry-title a:hover {
+        color: #67d9ff;
+        text-decoration: none; }
 
 footer {
+  padding: 2em 0 6em 0;
   color: #FFF;
   text-align: center; }
   footer .menu-footer-menu-container, footer .menu {
