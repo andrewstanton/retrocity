@@ -2,13 +2,74 @@
  * Responsive Styles
  */
 
+// Xtra-Small and up
+@include media-breakpoint-up(xs) {
 
+}
+
+// Small and up
+@include media-breakpoint-up(sm) {
+	.index-post-area {
+		display: block;
+	}
+}
 
 // Medium and up
 @include media-breakpoint-up(md) {
-	.main-navigation {
-		.menu-toggle {
-			display: none;
+	.content-banner {
+		height: 450px;
+	}
+
+	.logo-container {
+		text-align: left;
+	}
+
+	header {
+		.main-navigation {
+			margin-bottom: 0;
+
+			.menu-toggle {
+				display: none;
+			}
+
+			.menu-main-menu-container {
+				display: block;
+			}
+
+			ul.menu {
+				padding: 0;
+				display: flex;
+				justify-content: space-between;
+
+				li {
+					display: inline-block;
+
+					a {
+						padding: 1.2em 1em;
+					}
+				}
+			}
+
 		}
 	}
+
+	.index-post-area {
+		display: flex;
+		.post {
+			flex: 50%;
+		}
+	}
+}
+
+// Large and up
+@include media-breakpoint-up(lg) {
+	
+	header {
+		.main-navigation {
+			ul.menu {
+				justify-content: flex-end;
+			}
+		}
+	}
+
 }

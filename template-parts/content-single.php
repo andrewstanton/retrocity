@@ -9,27 +9,40 @@
 
 ?>
 
-<div class="section container">
+<div class="section">
+
+<?php 
+    $feat_image = wp_get_attachment_url( get_post_thumbnail_id());
+    if($feat_image):
+?>
+
+    <div class="entry-internal-thumbnail" style="background-image: url('<?php echo $feat_image; ?>')"></div>
+
+<?php endif ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-<header class="entry-header">
-    <?php hs_the_category_list(); ?>
-    <?php
-    if ( is_single() ) :
-        the_title( '<h1 class="entry-title">', '</h1>' );
-    else :
-        the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-    endif;
-    ?>
-    <span class="post-entry-date">Posted On <?php echo the_date('F d, Y')?></span>
-</header><!-- .entry-header -->
+    <div class="container">
 
-<div class="post-body">
+        <header class="entry-header">
+            <?php hs_the_category_list(); ?>
+            <?php
+                if ( is_single() ) :
+                    the_title( '<h1 class="entry-title">', '</h1>' );
+                else :
+                    the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+                endif;
+            ?>
+            <span class="post-entry-date">Posted On <?php echo the_date('F d, Y')?></span>
+        </header><!-- .entry-header -->
 
-<?php the_content(); ?>
+        <div class="post-body">
 
-</div>
+            <?php the_content(); ?>
+
+        </div>
+
+    </div>
 
 </article><!-- #post-## -->
 

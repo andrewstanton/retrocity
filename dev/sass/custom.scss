@@ -54,13 +54,122 @@ header {
     }
 }
 
+h1.page-title {
+    color: $retro_blue;
+    font-family: $main_font;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.entry-title {
+    font-family: $main_font;
+    text-align: center;
+    color: $retro_blue;
+}
+.post-entry-date {
+    font-style: italic;
+    font-size: 0.9em;
+    text-align: center;
+    display: block;
+}
+
+.post-body {
+    padding: 1em 0;
+    font-size: 1.2rem;
+}
+
+.entry-internal-thumbnail {
+    height: 350px;
+    background-size: center;
+    background-position: center center;
+    border-bottom: 5px solid $retro_blue;
+    margin-bottom: 1em;
+}
+
+.content-banner {
+    height: 280px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.logo-container {
+    text-align: center;
+}
+
+header {
+    .main-navigation {
+        margin-bottom: 1em;
+
+        .menu-toggle {
+            background-color: $retro_pink;
+            font-family: $header_font;
+            color: $white;
+            padding: 0.8em;
+            font-size: 0.9rem;
+            border: 0;
+            border-bottom: 3px solid darken($retro_pink, 15%);
+        }
+
+        .menu-main-menu-container {
+            display: none;
+        }
+
+        &.active {
+            .menu-main-menu-container {
+                display: block;
+            }
+        }
+    
+        ul.menu {
+            display: block;
+            padding: 0 1em;
+    
+            li {
+                display: block;
+                
+                a {
+                    padding: 0.5em;
+                }
+            }
+        }
+    }
+}
+
+
 .index-post-area {
     display: flex;
-    .post {
-        flex: 50%;
+    margin-bottom: 1em;
 
+    .post {
         .post-body-content {
             padding: 1em;
+        }
+
+        .post-entry-date {
+            font-size: 0.9rem;
+            font-style: italic;
+            text-align: left;
+        }
+
+        .entry-link {
+            margin-top: 0.8em;
+        }
+
+        .entry-content {
+            margin-top: 1em;
+        }
+
+        .entry-image {
+            height: 220px;
+            width: 100%;
+            background-size: cover;
+            background-position: center center;
+            margin-bottom: 1.2em;
+            border: 0;
+        }
+
+        .entry-title {
+            margin-bottom: 0;
         }
 
         &:nth-child(odd) {

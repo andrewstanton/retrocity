@@ -140,10 +140,10 @@ add_filter( 'wp_get_attachment_image_attributes', 'hs_post_thumbnail_sizes_attr'
 function hs_scripts() {
 	//Styles
 	wp_enqueue_style( 'hs-main', get_template_directory_uri() . '/style.min.css' );
-	
+
 	wp_enqueue_style( 'hs-fa', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css' );
 
-	wp_enqueue_script( 'hs-navigation', get_template_directory_uri() . '/dist/app.min.js', array('jquery'), '20151215', true );
+	wp_enqueue_script( 'hs-navigation', get_template_directory_uri() . '/dist/js/app.min.js', array('jquery'), '20151215', true );
 }
 add_action( 'wp_enqueue_scripts', 'hs_scripts' );
 

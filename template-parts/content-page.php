@@ -26,13 +26,20 @@
 	
 	if ( is_front_page() ) {
 	
+
 	// Get the 6 latest posts
 	$args = array(
 		'posts_per_page' => 6
 	);
 
 	$latest_posts_query = new WP_Query( $args );
+	?>
+	
+	<h1 class="page-title">
+		<?php echo the_title(); ?>
+	</h1>
 
+	<?php
 	// The Loop
 	if ( $latest_posts_query->have_posts() ) { ?>
 	

@@ -1,6 +1,10 @@
-$(document).ready(function() {
-    $('.nav-hide-show').click(function (e){
-        e.preventDefault();
-        $('.navigation-col').toggleClass('active');
+(function($) {
+
+    $(document).ready(function() {
+        $('.menu-toggle').click(function (e){
+            e.preventDefault();
+            $('.main-navigation').toggleClass('active');
+        });
     });
-});
+
+})(jQuery);

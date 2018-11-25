@@ -25,7 +25,7 @@
 		<div class="container">	
 						
 			<div class="row">
-				<div class="col-auto">
+				<div class="col-md-auto">
 					<div class="logo-container">
 						<a href="<?php echo get_home_url(); ?>" title="<?php echo get_bloginfo();?> Home Page">
 							<img src="<?php echo get_template_directory_uri() . '/imgs/logo.png';?>"
@@ -33,7 +33,7 @@
 						</a>
 					</div>
 				</div>
-				<div class="col">
+				<div class="col-md">
 					<div class="header-top">
 					<?php
 						if(has_nav_menu('social')){
@@ -44,7 +44,7 @@
 					<div class="header-bottom">
 						<nav id="site-navigation" class="main-navigation" role="navigation">
 							<button class="menu-toggle btn btn-block" aria-controls="primary-menu" aria-expanded="false">
-								Navigation
+								<i class="fas fa-bars"></i> Navigation
 							</button>
 							<?php
 								wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) );

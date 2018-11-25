@@ -13,6 +13,17 @@
 
 	<div class="post-body-content">
 
+		<?php 
+			$feat_image = wp_get_attachment_url( get_post_thumbnail_id());
+			if($feat_image):
+		?>
+		
+		<a href="<?php echo esc_url( get_permalink() ); ?>">
+			<div class="entry-image" style="background-image: url('<?php echo $feat_image; ?>')"></div>
+		</a>
+
+		<?php endif; ?>
+		
 		<header class="entry-header">
 			<?php hs_the_category_list(); ?>
 			<?php

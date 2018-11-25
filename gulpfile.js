@@ -63,7 +63,7 @@ const watchScripts = () => {
 
 const watchTask = parallel([ watchSASS, watchScripts ]);
 const defaultTasks = (done) => {
-    series(sassTask, watchTask)(done);
+    series(sassTask, scriptTask, watchTask)(done);
 }
 
 exports.default = defaultTasks;
