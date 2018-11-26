@@ -11,15 +11,6 @@
 
 <div class="section">
 
-<?php 
-    $feat_image = wp_get_attachment_url( get_post_thumbnail_id());
-    if($feat_image):
-?>
-
-    <div class="entry-internal-thumbnail" style="background-image: url('<?php echo $feat_image; ?>')"></div>
-
-<?php endif ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
     <div class="container">

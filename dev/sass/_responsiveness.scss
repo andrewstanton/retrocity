@@ -9,13 +9,19 @@
 
 // Small and up
 @include media-breakpoint-up(sm) {
-	.index-post-area {
-		display: block;
-	}
 }
 
 // Medium and up
 @include media-breakpoint-up(md) {
+	.index-post-area {
+		display: flex;
+	    margin-bottom: 1em;
+	}
+	
+	.entry-internal-thumbnail {
+		height: 300px;
+	}
+
 	.content-banner {
 		height: 450px;
 	}

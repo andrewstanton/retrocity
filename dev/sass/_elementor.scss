@@ -1,0 +1,54 @@
+/**
+ * Overwrite Elementor Styles
+ */
+
+.entry-content {
+    color: $white;
+
+    p {
+        color: $white;
+        font-family: $main_font;
+    }
+
+    h1, h2, h3, h4, h5, h6, h7, h8, h9 {
+        color: $retro_pink;
+        font-family: $header_font;
+
+        &.blue {
+            color: $retro_blue;
+        }
+    }
+    
+    .elementor-container {
+        .elementor-row {
+            .elementor-widget-container {
+                p {
+                    color: $white;
+                    font-family: $main_font;
+                }
+
+                a {
+                    color: $retro_blue;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                .elementor-button-link {
+                    border-radius: 0 !important;
+                    background-color: $retro_pink;
+                    color: $white;
+                    text-decoration: none;
+                    font-family: $header_font;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+
+}

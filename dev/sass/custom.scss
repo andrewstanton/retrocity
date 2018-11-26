@@ -2,6 +2,9 @@
  * Custom Styles
  */
 
+// Overwrite Elementor
+@import "./elementor";
+
 // Basic Areas
 
 header {
@@ -79,15 +82,15 @@ h1.page-title {
 }
 
 .entry-internal-thumbnail {
-    height: 350px;
-    background-size: center;
+    height: 220px;
+    background-size: cover;
     background-position: center center;
     border-bottom: 5px solid $retro_blue;
     margin-bottom: 1em;
 }
 
 .content-banner {
-    height: 280px;
+    height: 200px;
     background-position: center center;
     background-size: cover;
 }
@@ -137,8 +140,7 @@ header {
 
 
 .index-post-area {
-    display: flex;
-    margin-bottom: 1em;
+    display: block;
 
     .post {
         .post-body-content {
@@ -160,7 +162,7 @@ header {
         }
 
         .entry-image {
-            height: 220px;
+            height: 180px;
             width: 100%;
             background-size: cover;
             background-position: center center;
@@ -227,3 +229,4 @@ footer {
         }
     }
 }
+
