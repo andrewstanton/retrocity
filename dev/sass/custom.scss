@@ -6,9 +6,32 @@
 @import "./elementor";
 
 // Basic Areas
-
 header {
+    .header-top {
+        display: none;
+    }
     
+    .social-container {
+        a {
+            display: inline-block;
+            margin-left: 1em;
+            padding: 0.5em 1em;
+            color: $white;
+            &.facebook {
+                background-color: $facebook;
+                &:hover {
+                    background-color: darken($facebook, 10%);
+                }
+            }
+            &.twitter {
+                background-color: $twitter;
+                &:hover {
+                    background-color: darken($twitter, 10%);
+                }
+            }
+        }
+    }
+
     .logo-container {
         padding: 1em 0;
 

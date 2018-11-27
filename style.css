@@ -7174,6 +7174,23 @@ a.text-dark:hover, a.text-dark:focus {
     .entry-content .elementor-container .elementor-row .elementor-widget-container .elementor-button-link:hover {
       text-decoration: none; }
 
+header .header-top {
+  display: none; }
+
+header .social-container a {
+  display: inline-block;
+  margin-left: 1em;
+  padding: 0.5em 1em;
+  color: #FFF; }
+  header .social-container a.facebook {
+    background-color: #0e5bd6; }
+    header .social-container a.facebook:hover {
+      background-color: #0b47a6; }
+  header .social-container a.twitter {
+    background-color: #72ecff; }
+    header .social-container a.twitter:hover {
+      background-color: #3fe5ff; }
+
 header .logo-container {
   padding: 1em 0; }
   header .logo-container img {
@@ -7321,7 +7338,7 @@ footer {
   .entry-internal-thumbnail {
     height: 300px; }
   .content-banner {
-    height: 450px; }
+    height: 550px; }
   .logo-container {
     text-align: left; }
   header .main-navigation {
@@ -7345,4 +7362,7 @@ footer {
 
 @media (min-width: 992px) {
   header .main-navigation ul.menu {
-    justify-content: flex-end; } }
+    justify-content: flex-end; }
+  header .header-top {
+    text-align: right;
+    display: block; } }

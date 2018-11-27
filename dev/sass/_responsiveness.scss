@@ -23,7 +23,7 @@
 	}
 
 	.content-banner {
-		height: 450px;
+		height: 550px;
 	}
 
 	.logo-container {
@@ -31,6 +31,7 @@
 	}
 
 	header {
+		
 		.main-navigation {
 			margin-bottom: 0;
 
@@ -75,6 +76,11 @@
 			ul.menu {
 				justify-content: flex-end;
 			}
+		}
+		
+		.header-top {
+			text-align: right;
+			display: block;
 		}
 	}
 

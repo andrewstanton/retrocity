@@ -35,11 +35,9 @@
 				</div>
 				<div class="col-md">
 					<div class="header-top">
-					<?php
-						if(has_nav_menu('social')){
-							wp_nav_menu( array( 'theme_location' => 'social', 'menu_id' => 'social-menu' ) ); 
-						}
-					?>
+					
+						<?php get_template_part( 'template-parts/social' ); ?>
+					
 					</div>
 					<div class="header-bottom">
 						<nav id="site-navigation" class="main-navigation" role="navigation">
