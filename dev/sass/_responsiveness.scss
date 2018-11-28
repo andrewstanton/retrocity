@@ -54,6 +54,45 @@
 					a {
 						padding: 1.2em 1em;
 					}
+
+					&.current-menu-item {
+						ul {
+							position: absolute;
+							left: -9999px;
+							top: 100%;
+							padding: 0;
+							width: 200px;
+							li {
+								a {
+									background: none !important;
+									cursor: pointer;
+									color: #FFF;
+								}
+							}
+						}
+	
+						&:hover {
+							ul {
+								left: inherit;
+								right: 0;
+							}	
+						}
+					}
+
+					ul {
+						position: absolute;
+						left: -9999px;
+						top: 100%;
+						padding: 0;
+						width: 200px;
+					}
+
+					&:hover {
+						ul {
+							left: inherit;
+							right: 0;
+						}	
+					}
 				}
 			}
 

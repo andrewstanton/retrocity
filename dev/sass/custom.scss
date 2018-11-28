@@ -5,6 +5,11 @@
 // Overwrite Elementor
 @import "./elementor";
 
+.pink, a.pink {
+    color: $retro_pink !important;
+}
+
+
 // Basic Areas
 header {
     .header-top {
@@ -12,10 +17,12 @@ header {
     }
     
     .social-container {
+        margin-bottom: 5px;
         a {
             display: inline-block;
-            margin-left: 1em;
-            padding: 0.5em 1em;
+            margin-left: 0.2em;
+            padding: 0.5em 0.8em;
+            font-size: 14px;
             color: $white;
             &.facebook {
                 background-color: $facebook;
@@ -25,8 +32,15 @@ header {
             }
             &.twitter {
                 background-color: $twitter;
+                color: darken($twitter, 50%);
                 &:hover {
                     background-color: darken($twitter, 10%);
+                }
+            }
+            &.instagram {
+                background-color: $instagram;
+                &:hover {
+                    background-color: darken($instagram, 10%);
                 }
             }
         }
@@ -59,9 +73,44 @@ header {
                     a {
                         background-color: $retro_pink;
                         color: $black;
-                        cursor: default;    
+                        cursor: default;
+                    }
+                    
+                    ul {
+                        display: block;
+                        float: none;
+                        width: auto;
+                        left: 0;
+                        position: inherit;
+                        top: 0;
+                        padding: 0 1em;
+    
+                        li {
+                            background-color: lighten($black, 10%);
+                            display: block;
+                            a {
+                                background: none !important;
+                                color: #FFF;
+                            }
+                        }
                     }
                 }
+
+                ul {
+                    display: block;
+                    float: none;
+                    width: auto;
+                    left: 0;
+                    position: inherit;
+                    top: 0;
+                    padding: 0 1em;
+
+                    li {
+                        background-color: lighten($black, 10%);
+                        display: block;
+                    }
+                }
+
             }
         }
     }

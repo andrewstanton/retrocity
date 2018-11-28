@@ -12,4 +12,10 @@
     </a>
 <?php endif; ?>
 
+<?php if(get_theme_mod('hs_instagram')): ?>
+    <a href="<?php echo get_theme_mod('hs_instagram'); ?>" target="_blank" class="instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+<?php endif; ?>
+
 </div>

@@ -34,6 +34,10 @@
                     &:hover {
                         text-decoration: underline;
                     }
+
+                    &.pink {
+                        color: $retro_pink;
+                    }
                 }
 
                 .elementor-button-link {

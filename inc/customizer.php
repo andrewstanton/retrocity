@@ -26,6 +26,11 @@ function hs_customize_register( $wp_customize ) {
 		'sanitize_callback' => 'sanitize_text_field'
 	));
 
+	$wp_customize->add_setting( 'hs_instagram' , array(
+		'default' => 'http://instagram.com/{your instagram page}',
+		'sanitize_callback' => 'sanitize_text_field'
+	));
+
 	$wp_customize->add_control(
 	new WP_Customize_Control(
 		$wp_customize,
@@ -47,6 +52,17 @@ function hs_customize_register( $wp_customize ) {
 						'section' => 'title_tagline'
 						)
 	));
+
+	$wp_customize->add_control(
+		new WP_Customize_Control(
+			$wp_customize,
+			'hs_instagram',
+			array(
+				'label' => __( 'Instagram', 'hs' ),
+				'type' => 'text',
+							'section' => 'title_tagline'
+							)
+		));
 
 }
 add_action( 'customize_register', 'hs_customize_register' );
