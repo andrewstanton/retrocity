@@ -50,7 +50,7 @@ header {
         padding: 1em 0;
 
         img {
-            max-width: 250px;
+            max-width: 300px;
         }
     }
 
@@ -302,3 +302,33 @@ footer {
     }
 }
 
+.wpcf7-form {
+    p {
+        margin: 0 !important;
+    }
+    
+    .form-group {
+        width: 100%;
+        font-family: $header_font;
+        font-size: 1rem;
+        margin: 0 !important;
+
+        input, textarea {
+            font-family: $main_font;
+            border-radius: 0 !important;
+        }
+    }
+
+    input[type=submit].btn-block {
+        background-color: $retro_pink;
+        color: $white;
+        font-family: $header_font;
+        border: 0;
+        border-radius: 0;
+        font-size: 1rem;
+        padding: 1em;
+        &:hover {
+            background-color: darken($retro_pink, 20%);
+        }
+    }
+}

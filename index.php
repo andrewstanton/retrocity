@@ -24,9 +24,11 @@ get_header(); ?>
 				<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 			</header>
 
+	<?php
+	endif;
+	?>
+	<div class="index-post-area section container">
 		<?php
-		endif;
-
 		/* Start the Loop */
 		while ( have_posts() ) : the_post();
 
@@ -38,7 +40,9 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', get_post_format() );
 
 		endwhile;
-
+	?>
+	</div>
+	<?php
 	else :
 
 		get_template_part( 'template-parts/content', 'none' );
