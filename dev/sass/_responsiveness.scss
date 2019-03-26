@@ -18,12 +18,12 @@
 	    margin-bottom: 1em;
 	}
 	
-	.entry-internal-thumbnail {
-		height: 300px;
-	}
-
-	.content-banner {
-		height: 550px;
+	.content-banner { 
+		&_image {
+			> img {
+				max-height: 600px;
+			}
+		}
 	}
 
 	.logo-container {

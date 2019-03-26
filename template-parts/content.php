@@ -19,7 +19,9 @@
 		?>
 		
 		<a href="<?php echo esc_url( get_permalink() ); ?>">
-			<div class="entry-image" style="background-image: url('<?php echo $feat_image; ?>')"></div>
+			<div class="entry-image">
+				<img src="<?php echo $feat_image; ?>" />
+			</div>
 		</a>
 
 		<?php endif; ?>

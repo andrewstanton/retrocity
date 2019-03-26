@@ -7895,9 +7895,35 @@ h1.page-title {
   margin-bottom: 1em; }
 
 .content-banner {
-  height: 200px;
-  background-position: center center;
-  background-size: cover; }
+  background-color: #000;
+  position: relative;
+  overflow: hidden; }
+  .content-banner--internal {
+    margin-bottom: 4rem; }
+  .content-banner_blur {
+    position: absolute;
+    filter: blur(5px);
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    height: 110%;
+    margin-top: -20px; }
+  .content-banner_image {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    filter: blur(0); }
+    .content-banner_image > img {
+      display: block;
+      max-width: 90%;
+      max-height: 350px;
+      width: auto;
+      height: auto;
+      object-fit: cover; }
 
 .logo-container {
   text-align: center; }
@@ -7924,8 +7950,12 @@ header .main-navigation {
       header .main-navigation ul.menu li a {
         padding: 0.5em; }
 
+.d-flex {
+  display: flex; }
+
 .index-post-area {
-  display: block; }
+  display: block;
+  padding: 1rem; }
   .index-post-area .post .post-body-content {
     padding: 1em; }
   .index-post-area .post .post-entry-date {
@@ -7937,7 +7967,7 @@ header .main-navigation {
   .index-post-area .post .entry-content {
     margin-top: 1em; }
   .index-post-area .post .entry-image {
-    height: 180px;
+    text-align: center;
     width: 100%;
     background-size: cover;
     background-position: center center;
@@ -8005,10 +8035,8 @@ footer {
   .index-post-area {
     display: flex;
     margin-bottom: 1em; }
-  .entry-internal-thumbnail {
-    height: 300px; }
-  .content-banner {
-    height: 550px; }
+  .content-banner_image > img {
+    max-height: 600px; }
   .logo-container {
     text-align: left; }
   header .main-navigation {

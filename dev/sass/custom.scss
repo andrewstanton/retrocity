@@ -162,9 +162,43 @@ h1.page-title {
 }
 
 .content-banner {
-    height: 200px;
-    background-position: center center;
-    background-size: cover;
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+
+    &--internal {
+        margin-bottom: 4rem;
+    }
+
+    &_blur {
+        position: absolute;
+        filter: blur( 5px );        
+        background-position: center center;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        opacity: 0.5;
+        height: 110%;
+        margin-top: -20px;
+    }
+
+    &_image {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        filter: blur(0);
+         
+        > img {
+            display: block;
+            max-width: 90%;
+            max-height: 350px;
+            width: auto;
+            height: auto;
+            object-fit: cover;
+        }
+    }
 }
 
 .logo-container {
@@ -210,9 +244,13 @@ header {
     }
 }
 
+.d-flex {
+    display: flex;
+}
 
 .index-post-area {
     display: block;
+    padding: 1rem;
 
     .post {
         .post-body-content {
@@ -234,7 +272,7 @@ header {
         }
 
         .entry-image {
-            height: 180px;
+            text-align: center;
             width: 100%;
             background-size: cover;
             background-position: center center;
