@@ -45,27 +45,28 @@
 	
 	<div class="index-post-area section">
 
-	<div class="row">
-		<div class="col-md-auto">
-			<div class="text-center">
-				<iframe style="border: 0; width: 600px; height: 720px;" class="embed-responsive" src="https://bandcamp.com/EmbeddedPlayer/album=2237554796/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="http://retrocity.bandcamp.com/album/mixtape">Mixtape by Retrocity</a></iframe>
+		<div class="post-home-section">
+			<?php
+				//Posts Put On Home Page
+				while ( $latest_posts_query->have_posts() ) {
+
+					$latest_posts_query->the_post();
+					
+					// Get the standard index page content
+					get_template_part( 'template-parts/content', get_post_format() );
+					}
+				}
+			?>
+		</div>
+	
+	</div>
+
+	<div class="p-4">
+		<div class="wrapper">
+			<div class="responsive-embed-bandcamp">
+				<iframe style="border: 0;" src="https://bandcamp.com/EmbeddedPlayer/album=2237554796/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="http://retrocity.bandcamp.com/album/mixtape">Mixtape by Retrocity</a></iframe>
 			</div>
 		</div>
-		<div class="col-md d-flex">
-		<?php
-			//Posts Put On Home Page
-			while ( $latest_posts_query->have_posts() ) {
-
-				$latest_posts_query->the_post();
-				
-				// Get the standard index page content
-				get_template_part( 'template-parts/content', get_post_format() );
-				}
-			}
-		?>
-		</div>
-	</div>
-	
 	</div>
 	
 	<?php

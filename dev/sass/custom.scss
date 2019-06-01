@@ -5,368 +5,405 @@
 // Overwrite Elementor
 @import "./elementor";
 
-.pink, a.pink {
-    color: $retro_pink !important;
+.pink,
+a.pink {
+  color: $retro_pink !important;
 }
-
 
 // Basic Areas
 header {
-    .header-top {
-        display: none;
+  .header-top {
+    display: none;
+  }
+
+  .social-container {
+    margin-bottom: 5px;
+    a {
+      display: inline-block;
+      margin-left: 0.2em;
+      padding: 0.5em 0.8em;
+      font-size: 14px;
+      color: $white;
+      &.facebook {
+        background-color: $facebook;
+        &:hover {
+          background-color: darken($facebook, 10%);
+        }
+      }
+      &.twitter {
+        background-color: $twitter;
+        color: darken($twitter, 50%);
+        &:hover {
+          background-color: darken($twitter, 10%);
+        }
+      }
+      &.instagram {
+        background-color: $instagram;
+        &:hover {
+          background-color: darken($instagram, 10%);
+        }
+      }
     }
-    
-    .social-container {
-        margin-bottom: 5px;
+  }
+
+  .logo-container {
+    padding: 1em 0;
+
+    img {
+      max-width: 300px;
+    }
+  }
+
+  .main-navigation {
+    ul.menu {
+      justify-content: flex-end;
+
+      li {
         a {
-            display: inline-block;
-            margin-left: 0.2em;
-            padding: 0.5em 0.8em;
-            font-size: 14px;
-            color: $white;
-            &.facebook {
-                background-color: $facebook;
-                &:hover {
-                    background-color: darken($facebook, 10%);
-                }
-            }
-            &.twitter {
-                background-color: $twitter;
-                color: darken($twitter, 50%);
-                &:hover {
-                    background-color: darken($twitter, 10%);
-                }
-            }
-            &.instagram {
-                background-color: $instagram;
-                &:hover {
-                    background-color: darken($instagram, 10%);
-                }
-            }
+          padding: 1.2em 1em;
+          font-family: $header_font;
+          color: $white;
+          font-size: 1rem;
+
+          &:hover {
+            color: $retro_pink;
+          }
         }
-    }
+        &.current-menu-item {
+          a {
+            background-color: $retro_pink;
+            color: $black;
+            cursor: default;
+          }
 
-    .logo-container {
-        padding: 1em 0;
-
-        img {
-            max-width: 300px;
-        }
-    }
-
-    .main-navigation {
-        ul.menu {
-            justify-content: flex-end;
+          ul {
+            display: block;
+            float: none;
+            width: auto;
+            left: 0;
+            position: inherit;
+            top: 0;
+            padding: 0 1em;
 
             li {
-                a {
-                    padding: 1.2em 1em;
-                    font-family: $header_font;
-                    color: $white;
-                    font-size: 1rem;
-                    
-                    &:hover {
-                        color: $retro_pink;
-                    }
-                }
-                &.current-menu-item {
-                    a {
-                        background-color: $retro_pink;
-                        color: $black;
-                        cursor: default;
-                    }
-                    
-                    ul {
-                        display: block;
-                        float: none;
-                        width: auto;
-                        left: 0;
-                        position: inherit;
-                        top: 0;
-                        padding: 0 1em;
-    
-                        li {
-                            background-color: lighten($black, 10%);
-                            display: block;
-                            a {
-                                background: none !important;
-                                color: #FFF;
-                            }
-                        }
-                    }
-                }
-
-                ul {
-                    display: block;
-                    float: none;
-                    width: auto;
-                    left: 0;
-                    position: inherit;
-                    top: 0;
-                    padding: 0 1em;
-
-                    li {
-                        background-color: lighten($black, 10%);
-                        display: block;
-                    }
-                }
-
+              background-color: lighten($black, 10%);
+              display: block;
+              a {
+                background: none !important;
+                color: #fff;
+              }
             }
+          }
         }
+
+        ul {
+          display: block;
+          float: none;
+          width: auto;
+          left: 0;
+          position: inherit;
+          top: 0;
+          padding: 0 1em;
+
+          li {
+            background-color: lighten($black, 10%);
+            display: block;
+          }
+        }
+      }
     }
+  }
 }
 
 .site-main {
-    color: $white;
-    a {
-        color: $retro_blue;
-        text-decoration: none;
+  color: $white;
+  a {
+    color: $retro_blue;
+    text-decoration: none;
 
-        &:hover {
-            color: $retro_blue;
-            text-decoration: underline;
-        }
+    &:hover {
+      color: $retro_blue;
+      text-decoration: underline;
     }
+  }
 }
 
 h1.page-title {
-    color: $retro_blue;
-    font-family: $main_font;
-    text-align: center;
-    margin-bottom: 1em;
+  color: $retro_blue;
+  font-family: $main_font;
+  text-align: center;
+  margin-bottom: 1em;
 }
 
 .entry-title {
-    font-family: $main_font;
-    text-align: center;
-    color: $retro_blue;
+  font-family: $main_font;
+  text-align: center;
+  color: $retro_blue;
 }
 .post-entry-date {
-    font-style: italic;
-    font-size: 0.9em;
-    text-align: center;
-    display: block;
+  font-style: italic;
+  font-size: 0.9em;
+  text-align: center;
+  display: block;
 }
 
 .post-body {
-    padding: 1em 0;
-    font-size: 1.2rem;
+  padding: 1em 0;
+  font-size: 1.2rem;
 }
 
 .entry-internal-thumbnail {
-    height: 220px;
-    background-size: cover;
-    background-position: center center;
-    border-bottom: 5px solid $retro_blue;
-    margin-bottom: 1em;
+  height: 220px;
+  background-size: cover;
+  background-position: center center;
+  border-bottom: 5px solid $retro_blue;
+  margin-bottom: 1em;
 }
 
 .content-banner {
-    background-color: #000;
-    position: relative;
-    overflow: hidden;
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
 
-    &--internal {
-        margin-bottom: 4rem;
-    }
+  &--internal {
+    margin-bottom: 4rem;
+  }
 
-    &_blur {
-        position: absolute;
-        filter: blur( 5px );        
-        background-position: center center;
-        background-size: cover;
-        height: 100%;
-        width: 100%;
-        opacity: 0.5;
-        height: 110%;
-        margin-top: -20px;
-    }
+  &_blur {
+    position: absolute;
+    filter: blur(5px);
+    background-position: center center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    height: 110%;
+    margin-top: -20px;
+  }
 
-    &_image {
-        display: flex;
-        flex: 1;
-        justify-content: center;
-        align-content: center;
-        text-align: center;
-        filter: blur(0);
-         
-        > img {
-            display: block;
-            max-width: 90%;
-            max-height: 350px;
-            width: auto;
-            height: auto;
-            object-fit: cover;
-        }
+  &_image {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    filter: blur(0);
+
+    > img {
+      display: block;
+      max-width: 90%;
+      max-height: 350px;
+      width: auto;
+      height: auto;
+      object-fit: cover;
     }
+  }
 }
 
 .logo-container {
-    text-align: center;
+  text-align: center;
 }
 
 header {
-    .main-navigation {
-        margin-bottom: 1em;
+  .main-navigation {
+    margin-bottom: 1em;
 
-        .menu-toggle {
-            background-color: $retro_pink;
-            font-family: $header_font;
-            color: $white;
-            padding: 0.8em;
-            font-size: 0.9rem;
-            border: 0;
-            border-bottom: 3px solid darken($retro_pink, 15%);
-        }
-
-        .menu-main-menu-container {
-            display: none;
-        }
-
-        &.active {
-            .menu-main-menu-container {
-                display: block;
-            }
-        }
-    
-        ul.menu {
-            display: block;
-            padding: 0 1em;
-    
-            li {
-                display: block;
-                
-                a {
-                    padding: 0.5em;
-                }
-            }
-        }
+    .menu-toggle {
+      background-color: $retro_pink;
+      font-family: $header_font;
+      color: $white;
+      padding: 0.8em;
+      font-size: 0.9rem;
+      border: 0;
+      border-bottom: 3px solid darken($retro_pink, 15%);
     }
+
+    .menu-main-menu-container {
+      display: none;
+    }
+
+    &.active {
+      .menu-main-menu-container {
+        display: block;
+      }
+    }
+
+    ul.menu {
+      display: block;
+      padding: 0 1em;
+
+      li {
+        display: block;
+
+        a {
+          padding: 0.5em;
+        }
+      }
+    }
+  }
 }
 
 .d-flex {
-    display: flex;
+  display: flex;
+}
+
+.responsive-embed-bandcamp {
+  max-width: 700px;
+  width: 100%;
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin: auto;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 120px;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    max-width: 700px;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .index-post-area {
-    display: block;
-    padding: 1rem;
+  display: block;
+  padding: 1rem;
 
-    .post {
-        .post-body-content {
-            padding: 1em;
-        }
+  .post-home-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 
-        .post-entry-date {
-            font-size: 0.9rem;
-            font-style: italic;
-            text-align: left;
-        }
-
-        .entry-link {
-            margin-top: 0.8em;
-        }
-
-        .entry-content {
-            margin-top: 1em;
-        }
-
-        .entry-image {
-            text-align: center;
-            width: 100%;
-            background-size: cover;
-            background-position: center center;
-            margin-bottom: 1.2em;
-            border: 0;
-        }
-
-        .entry-title {
-            margin-bottom: 0;
-        }
-
-        &:nth-child(odd) {
-            .entry-title {
-                a {
-                    color: $retro_pink;
-                    &:hover {
-                        color: lighten($retro_pink, 10%);
-                        text-decoration: none;
-                    }
-                }
-            }
-        }
-        &:nth-child(even) {
-            .entry-title {
-                a {
-                    color: $retro_lit_blue;
-                    &:hover {
-                        color: darken($retro_lit_blue, 10%);
-                        text-decoration: none;
-                    }
-                }
-            }
-        }
+    @include media-breakpoint-down(md) {
+      grid-template-columns: 1fr;
     }
+  }
+
+  .post {
+    .post-body-content {
+      padding: 1em;
+    }
+
+    .post-entry-date {
+      font-size: 0.9rem;
+      font-style: italic;
+      text-align: left;
+    }
+
+    .entry-link {
+      margin-top: 0.8em;
+    }
+
+    .entry-content {
+      margin-top: 1em;
+    }
+
+    .entry-image {
+      text-align: center;
+      width: 100%;
+      background-size: cover;
+      background-position: center center;
+      margin-bottom: 1.2em;
+      border: 0;
+    }
+
+    .entry-title {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(odd) {
+      .entry-title {
+        a {
+          color: $retro_pink;
+          &:hover {
+            color: lighten($retro_pink, 10%);
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    &:nth-child(even) {
+      .entry-title {
+        a {
+          color: $retro_lit_blue;
+          &:hover {
+            color: darken($retro_lit_blue, 10%);
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
 }
 
 footer {
-    padding: 2em 0 6em 0;
-    color: $white;
-    text-align: center;
+  padding: 2em 0 6em 0;
+  color: $white;
+  text-align: center;
 
-    .menu-footer-menu-container, .menu {
-        display: inline;
-    }
+  .menu-footer-menu-container,
+  .menu {
+    display: inline;
+  }
 
-    .footer-nav {
-        ul {
-            padding: 0;
-            margin: 0;
+  .footer-nav {
+    ul {
+      padding: 0;
+      margin: 0;
 
-            li {
-                display: inline-block;
-                padding: 0 0.5em;
+      li {
+        display: inline-block;
+        padding: 0 0.5em;
 
-                a {
-                    color: $retro_pink;
-                    text-decoration: none;
-                    &:hover {
-                        color: $retro_pink;
-                        text-decoration: underline;
-                    }
-                }
-            }
+        a {
+          color: $retro_pink;
+          text-decoration: none;
+          &:hover {
+            color: $retro_pink;
+            text-decoration: underline;
+          }
         }
+      }
     }
+  }
 }
 
 .wpcf7-form {
-    p {
-        margin: 0 !important;
-    }
-    
-    .form-group {
-        width: 100%;
-        font-family: $header_font;
-        font-size: 1rem;
-        margin: 0 !important;
+  p {
+    margin: 0 !important;
+  }
 
-        input, textarea {
-            font-family: $main_font;
-            border-radius: 0 !important;
-        }
-    }
+  .form-group {
+    width: 100%;
+    font-family: $header_font;
+    font-size: 1rem;
+    margin: 0 !important;
 
-    input[type=submit].btn-block {
-        background-color: $retro_pink;
-        color: $white;
-        font-family: $header_font;
-        border: 0;
-        border-radius: 0;
-        font-size: 1rem;
-        padding: 1em;
-        &:hover {
-            background-color: darken($retro_pink, 20%);
-        }
+    input,
+    textarea {
+      font-family: $main_font;
+      border-radius: 0 !important;
     }
+  }
+
+  input[type="submit"].btn-block {
+    background-color: $retro_pink;
+    color: $white;
+    font-family: $header_font;
+    border: 0;
+    border-radius: 0;
+    font-size: 1rem;
+    padding: 1em;
+    &:hover {
+      background-color: darken($retro_pink, 20%);
+    }
+  }
 }
